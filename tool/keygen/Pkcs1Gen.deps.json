@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "7233b826d5294c488802013112e2e90aa9b26bb7"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Pkcs1Gen/1.0.0": {
+        "dependencies": {
+          "XC.Framework.Security.RSAUtil": "1.0.1"
+        },
+        "runtime": {
+          "Pkcs1Gen.dll": {}
+        }
+      },
+      "XC.BouncyCastle.Crypto/1.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/XC.BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "XC.Framework.Security.RSAUtil/1.0.1": {
+        "dependencies": {
+          "XC.BouncyCastle.Crypto": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/XC.Framework.Security.RSAUtil.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pkcs1Gen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "XC.BouncyCastle.Crypto/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tXs8j4//6hZkLi19GqjsAaGok0LfhrJ43UeCs4cwO7r+0nkc2Cce7VYaJVtC/GtvuNy9ocmWHBGWunD1+uOQww==",
+      "path": "xc.bouncycastle.crypto/1.0.0",
+      "hashPath": "xc.bouncycastle.crypto.1.0.0.nupkg.sha512"
+    },
+    "XC.Framework.Security.RSAUtil/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o1XMzwq1OPZZ+bFogh/GkkrG2ojG+1YAqx1Y2za9oHCIbTuksof9oDQr4hEZMndzMDg0mtaUd/y7eStGKkYgew==",
+      "path": "xc.framework.security.rsautil/1.0.1",
+      "hashPath": "xc.framework.security.rsautil.1.0.1.nupkg.sha512"
+    }
+  }
+}
