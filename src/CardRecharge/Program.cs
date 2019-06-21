@@ -16,7 +16,15 @@ namespace CardRecharge
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form_Login login = new Form_Login();
+            login.ShowDialog();
+            if(login.DialogResult == DialogResult.OK)
+            {
+                login.Dispose();
+                login.Close();
+                Application.Run(new Form_Login());
+
+            }
         }
     }
 }

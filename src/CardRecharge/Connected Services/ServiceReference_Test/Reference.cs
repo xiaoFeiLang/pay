@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CardRecharge.ServiceReference1 {
+namespace CardRecharge.ServiceReference_Test {
     using System.Data;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.DoorAuthoritySoap")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Test.DoorAuthoritySoap")]
     public interface DoorAuthoritySoap {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
@@ -88,12 +88,12 @@ namespace CardRecharge.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface DoorAuthoritySoapChannel : CardRecharge.ServiceReference1.DoorAuthoritySoap, System.ServiceModel.IClientChannel {
+    public interface DoorAuthoritySoapChannel : CardRecharge.ServiceReference_Test.DoorAuthoritySoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class DoorAuthoritySoapClient : System.ServiceModel.ClientBase<CardRecharge.ServiceReference1.DoorAuthoritySoap>, CardRecharge.ServiceReference1.DoorAuthoritySoap {
+    public partial class DoorAuthoritySoapClient : System.ServiceModel.ClientBase<CardRecharge.ServiceReference_Test.DoorAuthoritySoap>, CardRecharge.ServiceReference_Test.DoorAuthoritySoap {
         
         public DoorAuthoritySoapClient() {
         }

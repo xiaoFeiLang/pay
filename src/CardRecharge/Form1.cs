@@ -22,21 +22,24 @@ namespace CardRecharge
         IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(Config.serverUrl, Config.appId, Config.merchant_private_key, Config.version,
                           Config.sign_type, Config.alipay_public_key, Config.charset);
         //private readonly AlipayService _alipayService;
+        public Form1(string empid,string empname, string deptname)
+        {
+            InitializeComponent();
+            this.lblRemark.Text = "系统使用说明：\r\n 1.1.确认信息后输入充值金额点击“生成支付码”\r\n 2.扫码支付，等待支付结果显示\r\n 3.如需查询充值记录，点击左上角系统->充值记录查询 \r\n 5.如需修改密码，点击左上角系统->修改密码";
+            CheckForIllegalCrossThreadCalls = false;
+            this.TbWorkid.Text = empid;
+            this.TbEmpName.Text = empname;
+            this.TbDeptName.Text = deptname;
+        }
         public Form1()
         {
             InitializeComponent();
-            this.lblRemark.Text = "系统使用说明：\r\n sss";
+            this.lblRemark.Text = "系统使用说明：\r\n 1.确认信息后输入充值金额点击“生成支付码”\r\n 2.扫码支付，等待支付结果显示\r\n 3.如需查询充值记录，点击左上角系统->充值记录查询 \r\n 5.如需修改密码，点击左上角系统->修改密码"; 
             CheckForIllegalCrossThreadCalls = false;
         }
         private void QueryUserInfo_Click(object sender, EventArgs e)
         {
-            if(TbWorkid.Text.Length == 0)
-            {
-                return;
-            }
-            string[] result = service.GetEmpInfo(TbWorkid.Text).Split('|'); ;
-            TbEmpName.Text = result[1];
-            TbDeptName.Text = result[2];
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -47,6 +50,7 @@ namespace CardRecharge
 
             AlipayTradePrecreateContentBuilder builder = BuildPrecreateContent();
             string out_trade_no = builder.out_trade_no;
+            WIDout_request_no.Text = out_trade_no;
 
             //如果需要接收扫码支付异步通知，那么请把下面两行注释代替本行。
             //推荐使用轮询撤销机制，不推荐使用异步通知,避免单边账问题发生。
@@ -224,12 +228,6 @@ namespace CardRecharge
             this.lblSuccess.Text = "充值成功";
             this.lblBt.Text = "补贴余额：" + result[0] + " 元";
             this.lblCz.Text = "充值余额：" + result[1] + " 元";
-           
-            
-            this.TbEmpName.Text = "";
-            this.TbDeptName.Text = "";
-            this.TbWorkid.Text = "";
-
         }
         /// <summary>
         /// 请添加支付失败后的处理
@@ -238,6 +236,20 @@ namespace CardRecharge
         {
             //支付失败，请更新相应单据
             MessageBox.Show("Fail");
+        }
+
+        
+
+        private void ItemQuery_Click(object sender, EventArgs e)
+        {
+            Form_QueryRecord queryForm = new Form_QueryRecord();
+            queryForm.Show();
+        }
+
+        private void ItemChangePwd_Click(object sender, EventArgs e)
+        {
+            Form_ChangePwd changeForm = new Form_ChangePwd(TbWorkid.Text);
+            changeForm.Show();
         }
     }
 }

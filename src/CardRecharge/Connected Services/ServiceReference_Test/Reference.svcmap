@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="da16914f-07a1-45e2-816d-ec1c59512cc7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5412747e-3cd3-4419-80aa-ca0704b77233" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.5.0.122:83/DoorAuthority.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:27335/DoorAuthority.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DoorAuthority.wsdl" MetadataType="Wsdl" ID="6048196a-e269-4a14-ae11-12bac84d8f3e" SourceId="1" SourceUrl="http://10.5.0.122:83/DoorAuthority.asmx?wsdl" />
-    <MetadataFile FileName="DoorAuthority.disco" MetadataType="Disco" ID="03d1345f-c7d7-426f-a67d-74ff2937e774" SourceId="1" SourceUrl="http://10.5.0.122:83/DoorAuthority.asmx?disco" />
+    <MetadataFile FileName="DoorAuthority.wsdl" MetadataType="Wsdl" ID="deb88cf0-f052-4b42-a419-9d47054c1542" SourceId="1" SourceUrl="http://localhost:27335/DoorAuthority.asmx?wsdl" />
+    <MetadataFile FileName="DoorAuthority.disco" MetadataType="Disco" ID="43d8798b-2dc0-4d8e-9087-52124fb81ee3" SourceId="1" SourceUrl="http://localhost:27335/DoorAuthority.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
